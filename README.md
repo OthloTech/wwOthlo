@@ -1,2 +1,2 @@
 # wwOthlo-dev
-動的に作成するwwOthloです
+WordPressで動作させるwwOthloです
