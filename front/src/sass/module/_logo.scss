@@ -1,0 +1,36 @@
+/*
+#styleguide
+OthloTechロゴ
+
+```
+<p class="othlo-logo"><span class="before">Othlo</span><span class="after">Tech</span></p>
+<p class="othlo-logo font-xlarge"><span class="before">Othlo</span><span class="after">Tech</span></p>
+<p class="othlo-logo font-xxxlarge"><span class="before">Othlo</span><span class="after">Tech</span></p>
+
+<p class="othlo-logo white-logo"><span class="before">Othlo</span><span class="after">Tech</span></p>
+<p class="othlo-logo white-logo font-xlarge"><span class="before">Othlo</span><span class="after">Tech</span></p>
+<p class="othlo-logo white-logo font-xxxlarge"><span class="before">Othlo</span><span class="after">Tech</span></p>
+```
+*/
+
+//import Othlo-font
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:600);
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:300);
+
+.othlo-logo {
+  font-family: $othlo-font-family;
+
+
+  &.white-logo {
+    background-color: $black-background-color;
+    color: $white-font-color;
+  }
+
+  .before {
+    font-weight: 600;
+  }
+
+  .after {
+    font-weight: 300;
+  }
+}

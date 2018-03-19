@@ -1,0 +1,213 @@
+@charset "UTF-8";
+/*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
+/* Normalization */
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:600);
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:300);
+:root { -ms-overflow-style: -ms-autohiding-scrollbar; overflow-y: scroll; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+audio:not([controls]) { display: none; }
+
+details { display: block; }
+
+input[type="number"] { width: auto; }
+
+input[type="search"] { -webkit-appearance: textfield; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+main { display: block; }
+
+summary { display: block; }
+
+pre { overflow: auto; }
+
+progress { display: inline-block; }
+
+small { font-size: 75%; }
+
+template { display: none; }
+
+textarea { overflow: auto; }
+
+[hidden] { display: none; }
+
+[unselectable] { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+/* Universal inheritance */
+*, ::before, ::after { box-sizing: inherit; }
+
+* { font-size: inherit; line-height: inherit; }
+
+::before, ::after { text-decoration: inherit; vertical-align: inherit; }
+
+/* Opinionated defaults */
+*, ::before, ::after { border-style: solid; border-width: 0; }
+
+* { margin: 0; padding: 0; }
+
+:root { box-sizing: border-box; cursor: default; font: 16px / 1.5 sans-serif; text-rendering: optimizeLegibility; }
+
+html { background-color: #FFFFFF; }
+
+a { text-decoration: none; }
+
+audio, canvas, iframe, img, svg, video { vertical-align: middle; }
+
+button, input, select, textarea { background-color: transparent; }
+
+button, input, select, textarea { color: inherit; font-family: inherit; font-style: inherit; font-weight: inherit; }
+
+button, [type="button"], [type="date"], [type="datetime"], [type="datetime-local"], [type="email"], [type="month"], [type="number"], [type="password"], [type="reset"], [type="search"], [type="submit"], [type="tel"], [type="text"], [type="time"], [type="url"], [type="week"], select, textarea { min-height: 1.5em; }
+
+code, kbd, pre, samp { font-family: monospace, monospace; }
+
+nav ol, nav ul { list-style: none; }
+
+select { -moz-appearance: none; -webkit-appearance: none; }
+
+select::-ms-expand { display: none; }
+
+select::-ms-value { color: currentColor; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+textarea { resize: vertical; }
+
+::-moz-selection { background-color: #B3D4FC; text-shadow: none; }
+
+::selection { background-color: #B3D4FC; text-shadow: none; }
+
+@media screen { [hidden~="screen"] { display: inherit; }
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) { clip: rect(0 0 0 0) !important; position: absolute !important; } }
+
+body { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-smoothing: antialiased; text-rendering: auto; font-size: 16px; font-family: "Source Han Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif; color: #333; background-color: #fff; }
+
+/*
+#styleguide
+OthloTechロゴ
+
+```
+<p class="othlo-logo"><span class="before">Othlo</span><span class="after">Tech</span></p>
+<p class="othlo-logo font-xlarge"><span class="before">Othlo</span><span class="after">Tech</span></p>
+<p class="othlo-logo font-xxxlarge"><span class="before">Othlo</span><span class="after">Tech</span></p>
+
+<p class="othlo-logo white-logo"><span class="before">Othlo</span><span class="after">Tech</span></p>
+<p class="othlo-logo white-logo font-xlarge"><span class="before">Othlo</span><span class="after">Tech</span></p>
+<p class="othlo-logo white-logo font-xxxlarge"><span class="before">Othlo</span><span class="after">Tech</span></p>
+```
+*/
+.othlo-logo { font-family: "Titillium Web", sans-serif; }
+
+.othlo-logo.white-logo { background-color: #333; color: #fff; }
+
+.othlo-logo .before { font-weight: 600; }
+
+.othlo-logo .after { font-weight: 300; }
+
+/*
+#styleguide
+Text
+
+```
+<p class="text-center" style="border-bottom: 1px solid #eee">中央寄せ</p>
+<p class="text-left" style="border-bottom: 1px solid #eee">左寄せ</p>
+<p class="text-right" style="border-bottom: 1px solid #eee">右寄せ</p>
+
+<p class="font-xsmall">font-xsmall</p>
+<p class="font-small">font-small</p>
+<p class="font-middle">font-middle</p>
+<p class="font-large">font-large</p>
+<p class="font-xlarge">font-xlarge</p>
+<p class="font-xxlarge">font-xxlarge</p>
+<p class="font-xxxlarge">font-xxlarge</p>
+
+```
+*/
+/* text-align */
+.text-center { text-align: center; }
+
+.text-left { text-align: left; }
+
+.text-right { text-align: right; }
+
+/* font-size */
+.font-xsmall { font-size: 10px; }
+
+.font-small { font-size: 12px; }
+
+.font-middle { font-size: 16px; }
+
+.font-large { font-size: 20px; }
+
+.font-xlarge { font-size: 24px; }
+
+.font-xxlarge { font-size: 36px; }
+
+.font-xxxlarge { font-size: 48px; }
+
+/*
+#styleguide
+Gradient
+
+```
+<div class="gradient01" style="width:300px; height:200px;"></div>
+```
+*/
+.gradient01 { background: linear-gradient(-90deg, rgba(195, 229, 240, 0.75) 0%, rgba(129, 203, 184, 0.75) 60.66%, rgba(90, 188, 152, 0.75) 100%); filter: alpha(opacity=75) progid:DXImageTransform.Microsoft.Alpha(opacity=75) progid:DXImageTransform.Microsoft.gradient(startColorstr='#5ABC98',endColorstr='#C3E5F0' , GradientType=1); }
+
+.clearfix { zoom: 1; }
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+
+.clearfix:after { clear: both; }
+
+.l-relative { position: relative; }
+
+.l-absolute { position: absolute; }
+
+/* 中央寄せ */
+.flexbox { display: flex; flex-wrap: wrap; }
+
+.center { justify-content: center; }
+
+.sp-between { justify-content: space-between; }
+
+.l-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.x-center { position: absolute; top: 50%; left: 50%; transform: translateX(-50%); }
+
+.y-center { position: absolute; top: 50%; transform: translateY(-50%); }
+
+.line-40 { line-height: 40px; }
+
+.map { width: 100%; height: 420px; }
+
+/* sp pc */
+@media (min-width: 780px) { .is-pc { display: block; }
+  .is-pc-ib { display: inline-block; }
+  .is-sp, .is-sp-ib { display: none !important; }
+  .l-left { float: left; }
+  .l-right { float: right; } }
+
+@media (max-width: 780px) { .is-pc, .is-pc-ib { display: none !important; }
+  .is-sp { display: block; }
+  .is-sp-ib { display: inline-block; } }
+
+.margin-bottom-40 { margin-bottom: 40px !important; }
+
+.margin-bottom-20 { margin-bottom: 20px !important; }
+
+.margin-bottom-0 { margin-bottom: 0; }
+
+.icon { display: inline-block; background-repeat: no-repeat; }
+
+.icon.icon-web-navigation-line-craft-1-109681 { background-image: url("../images/icon.png"); background-position: 0px 0px; background-size: 1540px 1026px; width: 512px; height: 512px; }
+
+.icon.icon-web-navigation-line-craft-2-109682 { background-image: url("../images/icon.png"); background-position: -514px 0px; background-size: 1540px 1026px; width: 512px; height: 512px; }
+
+.icon.icon-web-navigation-line-craft-3-109688 { background-image: url("../images/icon.png"); background-position: 0px -514px; background-size: 1540px 1026px; width: 512px; height: 512px; }
+
+.icon.icon-web-navigation-line-craft-4-109689 { background-image: url("../images/icon.png"); background-position: -514px -514px; background-size: 1540px 1026px; width: 512px; height: 512px; }
+
+.icon.icon-web-navigation-line-craft-5-109690 { background-image: url("../images/icon.png"); background-position: -1028px 0px; background-size: 1540px 1026px; width: 512px; height: 512px; }
+/*# sourceMappingURL=maps/style.css.map */
