@@ -1,0 +1,34 @@
+/*
+#styleguide
+Thumbnail
+
+サムネイル画像の設定
+
+```
+<div class="thumb blog">
+  <img src="assets/images/frontnote.png">
+</div>
+```
+*/
+
+/* text-align */
+.thumb {
+  overflow: hidden;
+  position: relative;
+
+  &.blog {
+    width: 300px;
+    height: 140px;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 100%;
+  }
+}
