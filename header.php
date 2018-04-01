@@ -31,18 +31,24 @@
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 <script> document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-container">
-      <span class="c">(c) 2018 OthloTech</span>
-      <div class="sns-container">
-        <span class="margin-right-12 text-xxlarge"><a href="#"><i class="fab fa-github"></i></a></span>
-        <span class="margin-right-12 text-xxlarge"><a href="#"><i class="fab fa-facebook"></i></a></span>
-        <span class="text-xxlarge"><a href="#"><i class="fab fa-twitter"></i></a></span>
-      </div>
-    </div>
-  </div>
-</footer>
-
 </head>
 <body>
+
+<header class="header">
+  <div class="container">
+    <div class="logo-container">
+      <a href="/">
+        <p class="othlo-logo white-logo text-xxlarge"><span class="before">Othlo</span><span class="after">Tech</span></p>
+      </a>
+    </div>
+    <nav class="header-nav">
+      <ul class="header-nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -37,39 +37,26 @@
     <div class="container">
       <h2 class="text-black"><span class="text-xxlarge text-strong margin-right-20">Blog</span><span class="text-large">ブログ</span></h2>
       <ul class="blog-list">
+        <?php query_posts('cat=1&posts_per_page=3'); ?>
+        <?php if ( have_posts() ) : ?>
+        <?php while( have_posts() ) : the_post(); ?>
         <li class="card default">
           <div class="thumb blog margin-right-20">
-            <img src="assets/images/main-background.png">
+            <?php the_post_thumbnail('thumbnail'); ?>
           </div>
           <div>
-            <p class="margin-bottom-4">2018/03/11(日)</p>
-            <p class="text-large margin-bottom-12 text-strong">プログラミングしたよいえーい</p>
-            <p>ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ</p>
+            <p class="margin-bottom-4"><?php the_date() ?></p>
+            <p class="text-large margin-bottom-12 text-strong"><?php the_title(); ?></p>
+            <p><?php the_excerpt(); ?></p>
           </div>
         </li>
-        <li class="card default">
-          <div class="thumb blog margin-right-20">
-            <img src="assets/images/main-background.png">
-          </div>
-          <div>
-            <p class="margin-bottom-4">2018/03/11(日)</p>
-            <p class="text-large margin-bottom-12 text-strong">プログラミングしたよいえーい</p>
-            <p>ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ</p>
-          </div>
-        </li>
-        <li class="card default">
-          <div class="thumb blog margin-right-20">
-            <img src="assets/images/main-background.png">
-          </div>
-          <div>
-            <p class="margin-bottom-4">2018/03/11(日)</p>
-            <p class="text-large margin-bottom-12 text-strong">プログラミングしたよいえーい</p>
-            <p>ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ</p>
-          </div>
-        </li>
+        <?php endwhile;?>
+        <?php else : ?>
+          <p>記事がありません。</p>
+        <?php endif; ?>
       </ul>
       <div class="btn default margin-0-auto">
-        <a>もっとみる</a>
+        <a href="/blog">もっとみる</a>
       </div>
     </div>
   </div>
