@@ -1,13 +1,12 @@
 <?php get_header(); ?>
 
 <section id="top">
-  <div class="mv-container"></div>
   <!-- ▼ event-container -->
   <div class="blog-container">
     <div class="container">
       <h2 class="text-black"><span class="text-xxlarge text-strong margin-right-20">Blog</span><span class="text-large">ブログ</span></h2>
       <ul class="blog-list">
-        <?php query_posts('cat=1'); ?>
+        <?php query_posts('category_name=blog'); ?>
         <?php if ( have_posts() ) : ?>
         <?php while( have_posts() ) : the_post(); ?>
         <li class="card default">

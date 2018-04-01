@@ -37,7 +37,7 @@
     <div class="container">
       <h2 class="text-black"><span class="text-xxlarge text-strong margin-right-20">Blog</span><span class="text-large">ブログ</span></h2>
       <ul class="blog-list">
-        <?php query_posts('cat=1&posts_per_page=3'); ?>
+        <?php query_posts('cat=0&posts_per_page=3'); ?>
         <?php if ( have_posts() ) : ?>
         <?php while( have_posts() ) : the_post(); ?>
         <li class="card default">
@@ -65,12 +65,10 @@
   <div class="about-container">
     <div class="container">
       <h3 class="othlo-logo white-logo text-center"><span class="text-xxxlarge margin-right-20 text-center"><span class="before">Othlo</span><span class="after">Tech</span></span>とは</h3>
-      <p class="about-lead text-white margin-bottom-40">ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ<br>
-      ほげほげほげほげほげほげほげほげほげほげほ<br>
-      げほげほげほげほげほげほげほげほげほげほげほげほげほげ<br>
-      ほげほげほげほげほげほげほげほげほげほげほ<br>
-      げほげほげほげほげほげほげほげほげほげほげほげほげほげ<br>
-      ほげほげほげほげほげほげほげ</p>
+      <p class="about-lead text-white margin-bottom-40">OthloTech(オスロテック)は「名古屋にクリエイティブな学生のコミュニティを作ろう」という思いから、2016年5月に立ち上がりました。<br />
+      <br />
+      OthloTechでは、IT系とデザイン系の学生向けの勉強会を月に1〜2回開いています。<br />
+      </p>
 
       <div class="about-btn btn-container twin">
         <div class="btn white margin-0-auto">

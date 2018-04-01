@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <section id="top">
-  <div class="mv-container"></div>
   <!-- ▼ event-container -->
   <div class="event-container gradient01">
     <div class="container">
@@ -37,7 +36,7 @@
     <div class="container">
       <h2 class="text-black"><span class="text-xxlarge text-strong margin-right-20">Event reports</span><span class="text-large">イベントレポート</span></h2>
       <ul class="blog-list">
-        <?php query_posts('cat=2'); ?>
+        <?php query_posts('category_name=events'); ?>
         <?php if ( have_posts() ) : ?>
         <?php while( have_posts() ) : the_post(); ?>
         <li class="card default">
