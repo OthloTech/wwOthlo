@@ -10,22 +10,22 @@
         <li>
           <span class="label label-primary margin-right-20">開催前</span>
           <div class="display">
-            <p>2018/03/11(日) 13:00〜</p>
-            <p class="text-large text-strong">プロトタイピングワークショップ@エイチーム</p>
+            <p><i class="far fa-calendar-alt margin-right-4"></i>2018/03/11(日) 13:00〜</p>
+            <p class="text-large text-strong"><a href="#" target="_blank">プロトタイピングワークショップ@エイチーム<i class="fas fa-external-link-alt "></i></a></p>
           </div>
         </li>
         <li>
           <span class="label label-primary margin-right-20">開催前</span>
           <div class="display">
-            <p>2018/03/11(日) 13:00〜</p>
-            <p class="text-large text-strong">プロトタイピングワークショップ@エイチーム</p>
+            <p><i class="far fa-calendar-alt margin-right-4"></i>2018/03/11(日) 13:00〜</p>
+            <p class="text-large text-strong"><a href="#" target="_blank">プロトタイピングワークショップ@エイチーム<i class="fas fa-external-link-alt "></i></a></p>
           </div>
         </li>
         <li>
           <span class="label label-extra margin-right-20">開催終了</span>
           <div class="display">
-            <p>2018/03/11(日) 13:00〜</p>
-            <p class="text-large text-strong">プロトタイピングワークショップ@エイチーム</p>
+            <p><i class="far fa-calendar-alt margin-right-4"></i>2018/03/11(日) 13:00〜</p>
+            <p class="text-large text-strong"><a href="#" target="_blank">プロトタイピングワークショップ@エイチーム<i class="fas fa-external-link-alt "></i></a></p>
           </div>
         </li>
       </ul>
@@ -41,14 +41,18 @@
         <?php if ( have_posts() ) : ?>
         <?php while( have_posts() ) : the_post(); ?>
         <li class="card default">
-          <div class="thumb blog margin-right-20">
-            <?php the_post_thumbnail('thumbnail'); ?>
-          </div>
-          <div>
-            <p class="margin-bottom-4"><?php the_date() ?></p>
-            <p class="text-large margin-bottom-12 text-strong"><?php the_title(); ?></p>
-            <p><?php the_excerpt(); ?></p>
-          </div>
+          <a href="#">
+            <div class="blog-box">
+              <div class="thumb blog margin-right-20">
+                <?php the_post_thumbnail('thumbnail'); ?>
+              </div>
+              <div>
+                <p class="margin-bottom-4"><i class="far fa-calendar-alt margin-right-4"></i><?php the_date() ?></p>
+                <p class="text-large margin-bottom-12 text-strong"><?php the_title(); ?></p>
+                <p><?php the_excerpt(); ?></p>
+              </div>
+            </div>
+          </a>
         </li>
         <?php endwhile;?>
         <?php else : ?>

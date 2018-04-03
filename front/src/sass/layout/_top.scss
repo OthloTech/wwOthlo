@@ -19,6 +19,18 @@
         justify-content: left;
         margin-bottom: 40px;
 
+        a {
+          svg {
+            font-size: 0.6em;
+            margin: 0 0 2px 4px;
+          }
+
+          &:hover {
+            transition: color .3s;
+            color: $anchor-font-color;
+          }
+        }
+
         &:last-child {
           margin-bottom: 0;
         }
@@ -30,16 +42,23 @@
     padding: 32px 0;
 
     .blog-list {
-      padding: 20px 0;
-
       li {
-        display: flex;
-        justify-content: left;
-        align-items: center;
         margin-bottom: 20px;
 
-        &:last-child {
-          margin-bottom: 0;
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+
+          .blog-box {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
         }
       }
     }
