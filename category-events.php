@@ -1,4 +1,39 @@
 <?php get_header(); ?>
+<?php
+// イベントが開催したかどうかを確認する
+function isOpen($event)
+{
+    $today = new DateTime("now");
+    
+    // 開催したかを確認
+    if ($today->format('c') < $event) {
+        return '<span class="label label-primary margin-right-20">開催前</span>';
+    } else if ($today->format('c') > $event) {
+        return '<span class="label label-extra margin-right-20">開催終了</span>';
+    }
+}
+
+
+// Connpass 検索用の関数定義
+function searchConnpass($base_url)
+{
+    // UserAgent 情報をセットする
+    $headers = array("User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36",);
+    
+    $curl = curl_init();
+    
+    curl_setopt($curl, CURLOPT_URL, $base_url);
+    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+    
+    $result = curl_exec($curl);
+    curl_close($curl);
+    
+    return $result;
+}
+?>
 
 <section id="top">
   <div class="mv-container"></div>
@@ -19,7 +54,7 @@
 			  $label[$i] = isOpen($data["events"][$i]["started_at"]);
 		  ?>
 			<li>
-				<span class="label label-primary margin-right-20"><?php echo $label[$i]; ?></span>
+				<?php echo $label[$i]; ?>
 				<div class="display">
 					<p><?php echo $event_time . $event_day; ?></p>
 					<p class="text-large text-strong"><?php echo $data["events"][$i]["title"]; ?></p>
