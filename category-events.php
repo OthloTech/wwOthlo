@@ -1,32 +1,32 @@
 <?php get_header(); ?>
 
 <section id="top">
+  <div class="mv-container"></div>
   <!-- ▼ event-container -->
   <div class="event-container gradient01">
     <div class="container">
-      <h2 class="text-white margin-bottom-12"><span class="text-xxlarge text-strong margin-right-20">Upcoming events</span><span class="text-large">今後のイベント</span></h2>
+      <h2 class="text-white margin-bottom-12"><span class="text-xxlarge text-strong margin-right-20">Event</span><span class="text-large">イベント</span></h2>
       <ul class="event-list overlay01">
-        <li>
-          <span class="label label-primary margin-right-20">開催前</span>
-          <div class="display">
-            <p>2018/03/11(日) 13:00〜</p>
-            <p class="text-large text-strong">プロトタイピングワークショップ@エイチーム</p>
-          </div>
-        </li>
-        <li>
-          <span class="label label-primary margin-right-20">開催前</span>
-          <div class="display">
-            <p>2018/03/11(日) 13:00〜</p>
-            <p class="text-large text-strong">プロトタイピングワークショップ@エイチーム</p>
-          </div>
-        </li>
-        <li>
-          <span class="label label-extra margin-right-20">開催終了</span>
-          <div class="display">
-            <p>2018/03/11(日) 13:00〜</p>
-            <p class="text-large text-strong">プロトタイピングワークショップ@エイチーム</p>
-          </div>
-        </li>
+	  	<?php $i = 0; ?>
+		  <?php while ($i < 3) : ?>
+		  <?php
+		  	$event_str = strtotime($data["events"][$i]["started_at"]);
+		  	// 日時
+		  	$event_time = date('Y/m/d', $event_str);
+		  	// 曜日
+		  	$event_day = $week[date('w', $event_str)];
+
+			  $label[$i] = isOpen($data["events"][$i]["started_at"]);
+		  ?>
+			<li>
+				<span class="label label-primary margin-right-20"><?php echo $label[$i]; ?></span>
+				<div class="display">
+					<p><?php echo $event_time . $event_day; ?></p>
+					<p class="text-large text-strong"><?php echo $data["events"][$i]["title"]; ?></p>
+				</div>
+			</li>
+		<?php $i++; ?>
+		<?php endwhile; ?>
       </ul>
     </div>
   </div>
