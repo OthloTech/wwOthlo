@@ -1,5 +1,14 @@
 <?php get_header(); ?>
 <?php
+// API 用のURL
+$base_url = "https://connpass.com/api/v1/event/?series_id=2131&order=2";
+
+// Connpass 検索用の関数「searchConnpass」にエンドポイントを引き渡し、返り値を取得
+$response = searchConnpass($base_url);
+$data = json_decode($response, true) ;
+
+$week = array("(日)", "(月)", "(火)", "(水)", "(木)", "(金)", "(土)");
+
 // イベントが開催したかどうかを確認する
 function isOpen($event)
 {
@@ -12,7 +21,6 @@ function isOpen($event)
         return '<span class="label label-extra margin-right-20">開催終了</span>';
     }
 }
-
 
 // Connpass 検索用の関数定義
 function searchConnpass($base_url)
