@@ -8,3 +8,55 @@ blogやイベントレポートで使うコンポーネント
 
 ```
 */
+
+.blog_main-image{
+	width: 100%;
+	height: 360px;
+}
+
+h1{
+	color: #fff;
+	font-size: 36px;
+	margin-left: 15px;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#29b8e5+0,b3dced+50,29b8e5+100 */
+	background: #29b8e5; /* Old browsers */
+	background: -moz-linear-gradient(left, #29b8e5 0%, #b3dced 50%, #29b8e5 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #29b8e5 0%,#b3dced 50%,#29b8e5 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #29b8e5 0%,#b3dced 50%,#29b8e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29b8e5', endColorstr='#29b8e5',GradientType=1 ); /* IE6-9 */
+
+	padding-bottom:4px;
+
+
+	span{
+		display:block;
+		padding-left:20px;
+		background-color: #333;
+	}
+}
+
+h2{
+	font-size: 24px;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#29b8e5+0,b3dced+50,29b8e5+100 */
+	background: #29b8e5; /* Old browsers */
+	background: -moz-linear-gradient(left, #29b8e5 0%, #b3dced 50%, #29b8e5 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #29b8e5 0%,#b3dced 50%,#29b8e5 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #29b8e5 0%,#b3dced 50%,#29b8e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29b8e5', endColorstr='#29b8e5',GradientType=1 ); /* IE6-9 */
+
+	padding-bottom:4px;
+	margin: 20px 0;
+
+	span{
+		display:block;
+		background-color: #fff;
+	}
+}
+
+h3{
+	font-size: 20px;
+}
+
+

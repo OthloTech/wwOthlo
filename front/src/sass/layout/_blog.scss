@@ -1,0 +1,42 @@
+.blog{
+  width: 100vw;
+  background-color: #eee;
+
+  .blog_container{
+    width: 1000px;
+    padding: 50px 0 100px;
+    margin: 0 auto;
+
+    .blog_main{
+      border-radius: 15px;
+      width: 750px;
+      box-shadow: 3px 3px 3px;
+      overflow:hidden;
+    }
+
+    .blog_title_box{
+      width: 100%;
+      height: 120px;
+      background-color: #333;
+      padding: 15px 20px;
+    }
+
+    .blog_title_box_bottom{
+      display: flex;
+      margin-top: 10px;
+
+      .blog_date{
+        color: #fff;
+        margin-left: 45px;
+      }
+
+      .blog_tag{
+      }
+    }
+
+    .blog_contents{
+      padding: 50px;
+      background-color: #fff;
+    }
+  }
+}
