@@ -15,44 +15,44 @@ blogやイベントレポートで使うコンポーネント
 }
 
 h1{
+	position: relative;
 	color: #fff;
 	font-size: 36px;
-	margin-left: 15px;
-
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#29b8e5+0,b3dced+50,29b8e5+100 */
-	background: #29b8e5; /* Old browsers */
-	background: -moz-linear-gradient(left, #29b8e5 0%, #b3dced 50%, #29b8e5 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, #29b8e5 0%,#b3dced 50%,#29b8e5 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, #29b8e5 0%,#b3dced 50%,#29b8e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29b8e5', endColorstr='#29b8e5',GradientType=1 ); /* IE6-9 */
-
-	padding-bottom:4px;
+	padding-left: 15px;
+}
 
 
-	span{
-		display:block;
-		padding-left:20px;
-		background-color: #333;
+.border-line{
+	&::after{
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 55px;
+		width: 100%;
+		height: 4px;
+		background: linear-gradient(-90deg, rgba(195, 229, 240, 0.75) 0%, rgba(129, 203, 184, 0.75) 60.66%, rgba(90, 188, 152, 0.75) 100%);
+		// IE6〜9
+		filter: alpha(opacity=75) progid:DXImageTransform.Microsoft.Alpha(opacity=75) progid:DXImageTransform.Microsoft.gradient(startColorstr='#5ABC98',endColorstr='#C3E5F0' , GradientType=1);
+		border-radius: 2px;
+	}
+
+	&.top-55 {
+		&::after {
+			top: 55px;
+		}
+	}
+
+	&.top-35 {
+		&::after {
+			top: 35px;
+		}
 	}
 }
 
 h2{
+	position: relative;
 	font-size: 24px;
-
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#29b8e5+0,b3dced+50,29b8e5+100 */
-	background: #29b8e5; /* Old browsers */
-	background: -moz-linear-gradient(left, #29b8e5 0%, #b3dced 50%, #29b8e5 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, #29b8e5 0%,#b3dced 50%,#29b8e5 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, #29b8e5 0%,#b3dced 50%,#29b8e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29b8e5', endColorstr='#29b8e5',GradientType=1 ); /* IE6-9 */
-
-	padding-bottom:4px;
-	margin: 20px 0;
-
-	span{
-		display:block;
-		background-color: #fff;
-	}
+	margin-bottom: 20px;
 }
 
 h3{
