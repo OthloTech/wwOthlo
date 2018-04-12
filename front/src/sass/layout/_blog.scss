@@ -1,4 +1,5 @@
 .blog{
+  width: 100vw;
   background-color: #ECEFF1;
 
   .blog_container{
@@ -6,12 +7,38 @@
     padding: 50px 0 100px;
     margin: 0 auto;
 
+    @media (max-width: 1130px) and (min-width: 768px){
+      width: 80%;
+    }
+
+    @media (max-width: 767px){
+      width: 90%;
+      padding: 25px 0 50px;
+    }
+
     .blog_main{
       display: inline-block;
       border-radius: 16px;
       width: 800px;
       overflow:hidden;
       clear: left;
+
+      @media (max-width: 1130px) and (min-width: 768px){
+        width: 100%;
+      }
+
+      @media (max-width: 767px){
+        width: 100%;
+      }
+
+      .blog_main-image{
+      	width: 100%;
+      	height: 420px;
+
+        @media (max-width: 767px){
+          height: 200px;
+        }
+      }
 
       .blog_title_box{
         width: 100%;
@@ -46,14 +73,29 @@
       .blog_contents{
         padding: 50px;
         background-color: #fff;
-      }
 
+        @media (max-width: 767px){
+          padding: 20px;
+        }
+      }
     }
 
 
     .blog-right{
       width: 300px;
       float: right;
+
+      @media (max-width: 1130px) and (min-width: 768px){
+        float: none;
+        width: 100%;
+        margin-top: 30px;
+      }
+
+      @media (max-width: 767px){
+        float: none;
+        width: 100%;
+        margin-top: 30px;
+      }
 
       .blog-right-box{
         width: 100%;
@@ -87,24 +129,41 @@
           height: 100%;
           padding: 15px 25px;
 
+          @media (max-width: 1130px) and (min-width: 768px){
+            display: flex;
+            flex-wrap: wrap;
+            padding: 15px 5%;
+          }
+
           .box{
             width: 100%;
             height: 80px;
             background-color: #fff;
-            padding: 15px 0;
+            padding: 5px 0;
             margin-bottom: 10px;
+
+            @media (max-width: 1130px) and (min-width: 768px){
+              display: inline-block;
+              width: 50%;
+              padding: 5px 10px;
+            }
+
+            &:hover{
+              background-color: #eeeeee;
+              transition: 0.3s;
+            }
 
             p{
               display: inline-block;
               font-size: 14px;
-              width: 150px;
-              vertical-align: middle;
+              width: 60%;
+              vertical-align: top;
             }
 
             img{
               display: inline-block;
-              width: 80px;
-              height: 50px;
+              width: 30%;
+              height: 100%;
               margin-left: 10px;
               vertical-align: middle;
             }
