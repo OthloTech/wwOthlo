@@ -13,7 +13,7 @@ $week = array("(日)", "(月)", "(火)", "(水)", "(木)", "(金)", "(土)");
 function isOpen($event)
 {
     $today = new DateTime("now");
-    
+
     // 開催したかを確認
     if ($today->format('c') < $event) {
         return '<span class="label label-primary margin-right-20">開催前</span>';
@@ -27,18 +27,18 @@ function searchConnpass($base_url)
 {
     // UserAgent 情報をセットする
     $headers = array("User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36",);
-    
+
     $curl = curl_init();
-    
+
     curl_setopt($curl, CURLOPT_URL, $base_url);
     curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-    
+
     $result = curl_exec($curl);
     curl_close($curl);
-    
+
     return $result;
 }
 ?>
@@ -66,8 +66,11 @@ function searchConnpass($base_url)
 			<li>
 				<?php echo $label[$i]; ?>
 				<div class="display">
-					<p><?php echo $event_time . $event_day . $time; ?></p>
-					<p class="text-large text-strong"><?php echo $data["events"][$i]["title"]; ?></p>
+          <a href="<?php the_permalink() ?>" target="_blank">
+  					<p><?php echo $event_time . $event_day . $time; ?></p>
+  					<p class="text-large text-strong"><?php echo $data["events"][$i]["title"]; ?></p>
+            <i class="fas fa-external-link-alt "></i>
+          </a>
 				</div>
 			</li>
 		<?php $i++; ?>
@@ -85,14 +88,18 @@ function searchConnpass($base_url)
         <?php if ( have_posts() ) : ?>
         <?php while( have_posts() ) : the_post(); ?>
         <li class="card default">
-          <div class="thumb blog margin-right-20">
-            <?php the_post_thumbnail('thumbnail'); ?>
-          </div>
-          <div>
-            <p class="margin-bottom-4"><?php the_date() ?></p>
-            <p class="text-large margin-bottom-12 text-strong"><?php the_title(); ?></p>
-            <p><?php the_excerpt(); ?></p>
-          </div>
+          <a href="<?php the_permalink() ?>">
+            <div class="blog-box">
+              <div class="thumb blog margin-right-20">
+                <?php the_post_thumbnail('thumbnail'); ?>
+              </div>
+              <div>
+                <p class="margin-bottom-4"><i class="far fa-calendar-alt margin-right-4"></i><?php the_date() ?></p>
+                <p class="text-large margin-bottom-12 text-strong"><?php the_title(); ?></p>
+                <p><?php the_excerpt(); ?></p>
+              </div>
+            </div>
+          </a>
         </li>
         <?php endwhile;?>
         <?php else : ?>

@@ -35,23 +35,31 @@ Button
 
   &.default {
     background-color: $base-background-color;
-    color: $base-font-color;
     border: 1px solid $base-font-color;
+    a {
+      color: $base-font-color;
+    }
 
     &:hover {
       background-color: $black-background-color;
-      color: $white-font-color;
+      a {
+        color: $white-font-color;
+      }
     }
   }
 
   &.white {
     background-color: $black-background-color;
-    color: $white-font-color;
     border: 1px solid $white-font-color;
+    a {
+      color: $white-font-color ;
+    }
 
     &:hover {
       background-color: $base-background-color;
-      color: $base-font-color;
+      a {
+        color: $base-font-color;
+      }
     }
   }
 
