@@ -1,4 +1,47 @@
 <?php get_header(); ?>
+<?php
+// API 用のURL
+$base_url = "https://connpass.com/api/v1/event/?series_id=2131&order=2";
+
+// Connpass 検索用の関数「searchConnpass」にエンドポイントを引き渡し、返り値を取得
+$response = searchConnpass($base_url);
+$data = json_decode($response, true) ;
+
+$week = array("(日)", "(月)", "(火)", "(水)", "(木)", "(金)", "(土)");
+
+// イベントが開催したかどうかを確認する
+function isOpen($event)
+{
+    $today = new DateTime("now");
+
+    // 開催したかを確認
+    if ($today->format('c') < $event) {
+        return '<span class="label label-primary margin-right-20">開催前</span>';
+    } else if ($today->format('c') > $event) {
+        return '<span class="label label-extra margin-right-20">開催終了</span>';
+    }
+}
+
+// Connpass 検索用の関数定義
+function searchConnpass($base_url)
+{
+    // UserAgent 情報をセットする
+    $headers = array("User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36",);
+
+    $curl = curl_init();
+
+    curl_setopt($curl, CURLOPT_URL, $base_url);
+    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+
+    $result = curl_exec($curl);
+    curl_close($curl);
+
+    return $result;
+}
+?>
 
 <section id="top">
   <div class="mv-container"></div>
@@ -7,27 +50,31 @@
     <div class="container">
       <h2 class="text-white margin-bottom-12"><span class="text-xxlarge text-strong margin-right-20">Event</span><span class="text-large">イベント</span></h2>
       <ul class="event-list overlay01">
-        <li>
-          <span class="label label-primary margin-right-20">開催前</span>
-          <div class="display">
-            <p><i class="far fa-calendar-alt margin-right-4"></i>2018/03/11(日) 13:00〜</p>
-            <p class="text-large text-strong"><a href="#" target="_blank">プロトタイピングワークショップ@エイチーム<i class="fas fa-external-link-alt "></i></a></p>
-          </div>
-        </li>
-        <li>
-          <span class="label label-primary margin-right-20">開催前</span>
-          <div class="display">
-            <p><i class="far fa-calendar-alt margin-right-4"></i>2018/03/11(日) 13:00〜</p>
-            <p class="text-large text-strong"><a href="#" target="_blank">プロトタイピングワークショップ@エイチーム<i class="fas fa-external-link-alt "></i></a></p>
-          </div>
-        </li>
-        <li>
-          <span class="label label-extra margin-right-20">開催終了</span>
-          <div class="display">
-            <p><i class="far fa-calendar-alt margin-right-4"></i>2018/03/11(日) 13:00〜</p>
-            <p class="text-large text-strong"><a href="#" target="_blank">プロトタイピングワークショップ@エイチーム<i class="fas fa-external-link-alt "></i></a></p>
-          </div>
-        </li>
+	  	<?php $i = 0; ?>
+		  <?php while ($i < 3) : ?>
+		  <?php
+		  	$event_str = strtotime($data["events"][$i]["started_at"]);
+		  	// 月日
+		  	$event_time = date('Y/m/d', $event_str);
+		  	// 曜日
+        $event_day = $week[date('w', $event_str)];
+        date_default_timezone_set( 'Asia/Tokyo' );
+        $time = date('H:i~', $event_str);
+
+			  $label[$i] = isOpen($data["events"][$i]["started_at"]);
+		  ?>
+			<li>
+				<?php echo $label[$i]; ?>
+				<div class="display">
+          <a href="<?php the_permalink() ?>" target="_blank">
+  					<p><?php echo $event_time . $event_day . $time; ?></p>
+  					<p class="text-large text-strong"><?php echo $data["events"][$i]["title"]; ?></p>
+            <i class="fas fa-external-link-alt "></i>
+          </a>
+				</div>
+			</li>
+		<?php $i++; ?>
+		<?php endwhile; ?>
       </ul>
     </div>
   </div>
@@ -41,7 +88,7 @@
         <?php if ( have_posts() ) : ?>
         <?php while( have_posts() ) : the_post(); ?>
         <li class="card default">
-          <a href="#">
+          <a href="<?php the_permalink() ?>">
             <div class="blog-box">
               <div class="thumb blog margin-right-20">
                 <?php the_post_thumbnail('thumbnail'); ?>
