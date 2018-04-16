@@ -24,4 +24,11 @@ Label
   &.label-extra {
     background: $label-extra;
   }
+
+  @media (max-width: $screen-change-width){
+    min-width: 60px;
+    padding: 6px;
+    height: 100%;
+    line-height: 20px;
+  }
 }

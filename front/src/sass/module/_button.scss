@@ -23,6 +23,7 @@ Button
   &.twin {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
