@@ -148,4 +148,8 @@
 .container {
   max-width: $content-max-width;
   margin: 0 auto;
+
+  @media (max-width: $screen-change-width) {
+    padding: 0 4%;
+  }
 }
