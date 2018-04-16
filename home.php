@@ -18,7 +18,7 @@ function isOpen($event)
     if ($today->format('c') < $event) {
         return '<span class="label label-primary margin-right-20">開催前</span>';
     } else if ($today->format('c') > $event) {
-        return '<span class="label label-extra margin-right-20">開催終了</span>';
+        return '<span class="label label-extra margin-right-20">開催</br class="is-sp">終了</span>';
     }
 }
 
@@ -90,10 +90,10 @@ function searchConnpass($base_url)
         <li class="card default">
           <a href="<?php the_permalink() ?>">
             <div class="blog-box">
-              <div class="thumb blog margin-right-20">
+              <div class="thumb blog left">
                 <?php the_post_thumbnail('thumbnail'); ?>
               </div>
-              <div>
+              <div class="right">
                 <p class="margin-bottom-4"><i class="far fa-calendar-alt margin-right-4"></i><?php the_date() ?></p>
                 <p class="text-large margin-bottom-12 text-strong"><?php the_title(); ?></p>
                 <p><?php the_excerpt(); ?></p>
