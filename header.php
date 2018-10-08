@@ -45,12 +45,21 @@
         <p class="othlo-logo white-logo text-xxlarge"><span class="before">Othlo</span><span class="after">Tech</span></p>
       </a>
     </div>
+    <input id="nav-input" type="checkbox" class="nav-input">
+    <label class="nav-open is-sp" for="nav-input">
+      <span></span>
+      <span></span>
+      <span></span>
+      <p>menu</p>
+    </label>
+    <label for="nav-input" class="nav-close"></label>
     <nav class="header-nav">
       <ul class="header-nav-list">
-        <li><a href="/">Home</a></li>
-        <li><a href="/events/">Events</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="/about/">About</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </div>

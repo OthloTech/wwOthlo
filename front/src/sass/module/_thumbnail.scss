@@ -17,7 +17,8 @@ Thumbnail
   position: relative;
 
   &.blog {
-    width: 300px;
+    background: $base-background-color;
+    width: 200px;
     height: 140px;
   }
 
@@ -30,5 +31,14 @@ Thumbnail
     transform: translate(-50%, -50%);
     width: auto;
     height: 100%;
+  }
+}
+
+@media(max-width: $screen-change-width){
+  .thumb {
+    &.blog {
+      width: 100%;
+      height: 200px;
+    }
   }
 }

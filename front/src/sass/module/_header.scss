@@ -1,41 +1,149 @@
-.header {
-  background-color: $black-background-color;
-  box-sizing: border-box;
-  width: 100%;
-  height: 80px;
+@media (min-width: $screen-change-width) {
+  .header {
+    background-color: $black-background-color;
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-
-    .logo-container {
-      line-height: 80px;
-    }
-  }
-
-  .header-nav {
-
-    .header-nav-list {
+    .container {
       display: flex;
       justify-content: space-between;
-      padding: 20px 0;
 
-      li {
-        font-size: 18px;
-        line-height: 36px;
-        box-sizing: border-box;
+      .logo-container {
+        line-height: 80px;
+      }
 
-        &:hover {
-          border-bottom: 2px solid $white-font-color;
+      #nav-input {
+        display: none;
+      }
+
+      .header-nav {
+        .header-nav-list {
+          display: flex;
+          justify-content: space-between;
+          padding: 20px 0;
+
+          li {
+            font-size: 18px;
+            line-height: 36px;
+            box-sizing: border-box;
+
+            &:hover {
+              border-bottom: 2px solid $white-font-color;
+            }
+
+            a {
+              color: $white-font-color;
+              display: block;
+              cursor: pointer;
+              padding: 4px 16px 0;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-change-width) {
+  .header {
+    top: 0;
+    background-color: $black-background-color;
+    z-index: 100;
+    width: 100%;
+
+    .container {
+      box-sizing: border-box;
+      height: 56px;
+      padding: 12px 20px;
+
+      .logo-container {
+        display: inline-block;
+
+        .othlo-logo {
+          font-size: 32px;
+          line-height: 32px;
+        }
+      }
+
+      #nav-input {
+        display: none;
+      }
+
+      .nav-open {
+        display: inline-block;
+        float: right;
+        width: 32px;
+        height: 32px;
+        position: relative;
+        cursor: pointer;
+
+        span {
+          position: absolute;
+          height: 2px;/*線の太さ*/
+          width: 32px;/*長さ*/
+          background: $white-font-color;
+          display: block;
+          content: '';
+          cursor: pointer;
+
+          &:nth-of-type(1) {
+            top: 0px;
+          }
+
+          &:nth-of-type(2) {
+            top: 9px;
+          }
+          &:nth-of-type(3) {
+            top: 18px;
+          }
         }
 
-        a {
+        p {
           color: $white-font-color;
-          display: block;
-          cursor: pointer;
-          padding: 4px 16px 0;
-          width: 100%;
-          height: 100%;
+          position: absolute;
+          font-size: 11.5px;
+          font-weight: bold;
+          width: 32px;
+          text-align: center;
+          top: 20px;
+        }
+      }
+
+      .header-nav {
+        overflow: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9999;/*最前面に*/
+        width: 100%;/*右側に隙間を作る（閉じるカバーを表示）*/
+        background: rgba(255, 255, 255, 0.9);
+        transition: .3s ease-in-out;/*滑らかに表示*/
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);/*左に隠しておく*/
+
+        ul {
+          li {
+            border-bottom: 1px solid $base-font-color;
+            text-align: center;
+
+            a {
+              display: block;
+              color: $base-font-color;
+              width: 100%;
+              height: 100%;
+              padding: 10px 0;
+            }
+          }
+        }
+      }
+
+      .nav-input {
+        &:checked ~ .header-nav {
+          -webkit-transform: translateY(56px);
+          transform: translateY(56px);
         }
       }
     }
