@@ -19,12 +19,6 @@ docker/stop:
 docker/clean:
 	docker-compose rm
 
-nginx/bash:
-	docker-compose exec nginx bash
-
-db/bash:
-	docker-compose exec db bash
-
 node/bash:
 	docker-compose exec node bash
 
@@ -32,4 +26,4 @@ npm/install:
 	docker-compose exec node npm install
 
 npm/start:
-	docker-compose exec node npm run watch
+	docker-compose exec node npm run start
