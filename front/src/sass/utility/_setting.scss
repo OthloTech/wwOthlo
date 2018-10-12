@@ -1,0 +1,16 @@
+//antialiased,subpixel-antialiased,none
+$font-smoothing: antialiased;
+
+//auto,optimizeSpeed,optimizeLegibility,geometricPrecision
+$text-rendering: auto;
+
+// font-family
+$base-font-family: "Source Han Sans","游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$othlo-font-family:  "Titillium Web", sans-serif;
+
+// width
+$content-max-width: 960px;
+$screen-change-width: 780px;
+
+// fotn-size
+$base-font-size: 16px;
