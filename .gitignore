@@ -3,6 +3,4 @@
 
 # Dependency directories
 node_modules/
-front/node_modules/
-front/guide/
-front/public/
+app/public
