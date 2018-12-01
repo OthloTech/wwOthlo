@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "style": "node node_modules/sc5-styleguide/bin/styleguide --kssSource src/**/*.scss --styleSource public/css/*.css --output guide --overviewPath overview.md --watch --server",
+    "style": "node node_modules/sc5-styleguide/bin/styleguide --kssSource src/scss/guide.scss --styleSource public/css/*.css --output guide --overviewPath overview.md --watch --server",
     "start": "webpack --mode development; webpack-dev-server --mode development"
   },
   "author": "",
