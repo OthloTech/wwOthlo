@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:600);
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:300);
+
 //antialiased,subpixel-antialiased,none
 $font-smoothing: antialiased;
  //auto,optimizeSpeed,optimizeLegibility,geometricPrecision
@@ -10,9 +13,21 @@ $content-max-width: 960px;
 $screen-change-width: 780px;
  // fotn-size
 $base-font-size: 16px;
- /*---------------
+
+$half: 50%;
+
+$shadow: 0 6px 30px 0 rgba(0,0,0,0.3);
+
+/*------------------------------
+  border-radius
+------------------------------*/
+$radius-small: 4px;
+$radius-medium: 8px;
+$radius-lerge: 32px;
+
+ /*------------------------------
   color
----------------*/
+------------------------------*/
 $primary-color: #25D595;
 $base-color: #333;
 $white-color: #fff;
