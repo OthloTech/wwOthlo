@@ -31,6 +31,7 @@ module.exports = {
           'css-loader',
           'postcss-loader',
           'sass-loader',
+          'import-glob-loader'
         ]
       },
       {
