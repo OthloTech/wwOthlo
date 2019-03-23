@@ -3,4 +3,6 @@
 
 # Dependency directories
 node_modules/
-app/public
+app/package-lock.json
+app/guide/
+app/public/

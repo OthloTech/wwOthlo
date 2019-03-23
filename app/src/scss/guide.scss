@@ -1,0 +1,68 @@
+// Button
+//
+// ボタンです。
+//
+// Markup:
+// <div class="l-bottom-medium" style="padding: 10px; background-color: #333">
+//   <div class="button default" >
+//     <a href="#">1</a>
+//   </div>
+// </div>
+// <div class="button primary"><a href="#">2</a></div>
+//
+// Styleguide 1.0.0
+
+// Logo
+//
+// OthloTechのロゴのスタイル
+//
+// Markup:
+// <p class="othlo-logo"><span class="before">Othlo</span><span class="after">Tech</span></p>
+// <p class="othlo-logo text-xlarge"><span class="before">Othlo</span><span class="after">Tech</span></p>
+// <p class="othlo-logo text-xxxlarge"><span class="before">Othlo</span><span class="after">Tech</span></p>
+// <p class="othlo-logo white-logo" style="background-color:#333;"><span class="before">Othlo</span><span class="after">Tech</span></p>
+// <p class="othlo-logo white-logo text-xlarge" style="background-color:#333;"><span class="before">Othlo</span><span class="after">Tech</span></p>
+// <p class="othlo-logo white-logo text-xxxlarge" style="background-color:#333;"><span class="before">Othlo</span><span class="after">Tech</span></p>
+//
+// Styleguide 2.0.0
+
+
+
+// Text
+//
+// 右揃え、左揃え、中央揃え
+//
+// Markup:
+// <p class="text-center" style="border-bottom: 1px solid #eee">中央寄せ</p>
+// <p class="text-left" style="border-bottom: 1px solid #eee">左寄せ</p>
+// <p class="text-right" style="border-bottom: 1px solid #eee">右寄せ</p>
+//
+// Styleguide 3.0.0
+
+// Text 2
+//
+// フォントサイズをちょっと変えたい時に使えるヨ
+//
+// Markup:
+// <p class="text-xsmall">text-xsmall(8px)</p>
+// <p class="text-small">text-small(12px)</p>
+// <p class="text-middle">text-middle(16px)</p>
+// <p class="text-large">text-large(20px)</p>
+// <p class="text-xlarge">text-xlarge(24px)</p>
+// <p class="text-xxlarge">text-xxxlarge(32px)</p>
+// <p class="text-xxxlarge">text-xxlarge(48px)</p>
+//
+// Styleguide 3.0.1
+
+// Text 3
+//
+// フォントの色
+//
+// Markup:
+// <p class="text-black" style="padding: 10px;">black</p>
+// <p class="text-white" style="padding: 10px; background-color: #333">white</p>
+// decoration
+// <p class="text-strong">text-strong</p>
+// <p class="text-underline">text-underline</p>
+//
+// Styleguide 3.0.2

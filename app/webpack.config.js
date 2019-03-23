@@ -27,11 +27,12 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-            MiniCssExtractPlugin.loader,
-            'css-loader',
-            'postcss-loader',
-            'sass-loader'
-          ]
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
+          'import-glob-loader'
+        ]
       },
       {
         test: /\.(jpg|png|gif)$/,
@@ -46,7 +47,10 @@ module.exports = {
       },
       {
         test: /\.ejs$/,
-        use: 'ejs-compiled-loader'
+        use: [
+          'html-loader',
+          'ejs-html-loader'
+        ]
       }
     ]
   }

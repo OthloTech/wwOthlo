@@ -1,0 +1,17 @@
+.u-display {
+  &-flex {
+    display: flex !important;
+  }
+
+  &-block {
+    display: block !important;
+  }
+
+  &-inlineBlock {
+    display: inline-block !important;
+  }
+
+  &-inline {
+    display: inline !important;
+  }
+}

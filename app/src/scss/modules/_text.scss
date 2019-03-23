@@ -1,0 +1,52 @@
+ /* text-align */
+.text-center {
+  text-align: center;
+}
+ .text-left {
+  text-align: left;
+}
+ .text-right {
+  text-align: right;
+}
+
+
+ /* text-size */
+.text-xsmall {
+  font-size: 8px;
+}
+ .text-small {
+  font-size: 12px;
+}
+ .text-middle {
+  font-size: 16px;
+}
+ .text-large {
+  font-size: 20px;
+}
+ .text-xlarge {
+  font-size: 24px;
+}
+ .text-xxlarge {
+  font-size: 32px;
+}
+ .text-xxxlarge {
+  font-size: 48px;
+}
+
+
+ /* color */
+.text-black {
+  color: $base-color;
+}
+ .text-white {
+  color: $white-color;
+}
+
+
+ /* decoration */
+.text-strong {
+  font-weight: bold;
+}
+ .text-underline {
+  text-decoration: underline;
+}

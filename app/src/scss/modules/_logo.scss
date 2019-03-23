@@ -1,0 +1,12 @@
+ .othlo-logo {
+  font-family: $othlo-font-family;
+   &.white-logo {
+    color: $white-color;
+  }
+   .before {
+    font-weight: 600;
+  }
+   .after {
+    font-weight: 300;
+  }
+}
